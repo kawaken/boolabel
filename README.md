@@ -7,9 +7,9 @@ app/models/egg.rb
 ```ruby
 class Egg < ActiveRecord::Base
   include Boolabel
-  
+
   boolabel :boiled
-  
+
 end
 ```
 
@@ -25,15 +25,15 @@ ja:
 ```
 $ rails c
 Loading development environment (Rails 4.1.4)
-[1] pry(main)> f = Egg.new
+[1] pry(main)> egg = Egg.new
 => #<Egg id: nil, boiled: false, created_at: nil, updated_at: nil>
-[2] pry(main)> f.boiled
+[2] pry(main)> egg.boiled
 => false
-[3] pry(main)> f.boiled_lable
+[3] pry(main)> egg.boiled_label
 => "ゆでてなーい"
-[4] pry(main)> f.boiled!
+[4] pry(main)> egg.boiled!
 => true
-[5] pry(main)> f.boiled_lable
+[5] pry(main)> egg.boiled_label
 => "ゆでた"
 
 ```
